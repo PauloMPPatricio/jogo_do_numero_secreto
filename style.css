@@ -1,0 +1,159 @@
+/* Reset de estilos e configuração global */
+* {
+    box-sizing: border-box; /* Inclui padding e border no cálculo de largura/altura */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimento padrão */
+    color: white; /* Define a cor padrão do texto como branca */
+}
+
+/* Estilização do corpo da página */
+body {
+    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%); /* Fundo com gradiente */
+    height: 100vh; /* Altura total da janela */
+    display: flex; /* Flexbox para centralizar o conteúdo */
+    align-items: center; /* Alinhamento vertical */
+    justify-content: center; /* Alinhamento horizontal */
+}
+
+/* Efeito de imagem de fundo no corpo */
+body::before {
+    background-image: url("img/code.png"); /* Imagem decorativa no fundo */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    background-position: right; /* Posiciona a imagem à direita */
+    content: ""; /* Insere o conteúdo vazio para o pseudo-elemento */
+    display: block; /* Garante que o pseudo-elemento seja exibido */
+    position: absolute; /* Posicionamento absoluto em relação ao body */
+    width: 100%; /* Ocupa toda a largura */
+    height: 100%; /* Ocupa toda a altura */
+    opacity: 0.4; /* Transparência da imagem de fundo */
+}
+
+/* Contêiner principal */
+.container {
+    width: 80%; /* Largura relativa à tela */
+    height: 80%; /* Altura relativa à tela */
+    display: flex; /* Flexbox para organizar o conteúdo */
+    align-items: center; /* Alinhamento vertical do conteúdo */
+    justify-content: space-between; /* Espaçamento igual entre elementos */
+    border-radius: 24px; /* Arredondamento das bordas */
+    border: 1px solid #1875E8; /* Borda com cor específica */
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15); /* Sombra do contêiner */
+    background-image: url("img/Ruido.png"); /* Textura de fundo */
+    background-size: 100% 100%; /* Ajusta a imagem ao tamanho do contêiner */
+    position: relative; /* Permite elementos posicionados dentro */
+}
+
+/* Subcontêiner de conteúdo */
+.container__conteudo {
+    display: flex; /* Organização dos elementos dentro do contêiner */
+    align-items: center; /* Alinhamento vertical */
+    position: absolute; /* Posicionamento relativo ao contêiner */
+    bottom: 0; /* Posicionado na base */
+}
+
+/* Área de informações e interação */
+.container__informacoes {
+    flex: 1; /* Ocupa o máximo de espaço possível */
+    padding: 3rem; /* Espaçamento interno */
+}
+
+/* Estilização dos botões */
+.container__botao {
+    border-radius: 16px; /* Bordas arredondadas */
+    background: #1875E8; /* Cor de fundo */
+    padding: 16px 24px; /* Espaçamento interno */
+    width: 100%; /* Largura total do botão */
+    font-size: 24px; /* Tamanho da fonte */
+    font-weight: 700; /* Espessura da fonte */
+    border: none; /* Remove a borda padrão */
+    margin-top: 2rem; /* Margem superior */
+}
+
+/* Margens para o texto no cabeçalho */
+.container__texto {
+    margin: 16px 0 16px 0; /* Margens superior e inferior */
+}
+
+/* Destaque para o texto em azul */
+.container__texto-azul {
+    color: #1875E8; /* Cor do texto */
+}
+
+/* Estilização do campo de entrada */
+.container__input {
+    width: 100%; /* Largura total */
+    height: 72px; /* Altura fixa */
+    border-radius: 16px; /* Bordas arredondadas */
+    background-color: #FFF; /* Cor de fundo */
+    border: none; /* Remove borda padrão */
+    color: #1875E8; /* Cor do texto */
+    padding: 2rem; /* Espaçamento interno */
+    font-size: 24px; /* Tamanho da fonte */
+    font-weight: 700; /* Espessura da fonte */
+    font-family: 'Inter', sans-serif; /* Fonte do texto */
+}
+
+/* Espaçamento entre os botões */
+.container__botoes {
+    display: flex; /* Coloca os botões lado a lado */
+    gap: 2em; /* Espaço entre os botões */
+}
+
+/* Estilização do título */
+h1 {
+    font-family: 'Chakra Petch', sans-serif; /* Fonte personalizada */
+    font-size: 57px; /* Tamanho da fonte */
+    padding-bottom: 3rem; /* Espaçamento abaixo do título */
+}
+
+/* Estilização dos parágrafos e botões */
+p,
+button {
+    font-family: 'Inter', sans-serif; /* Fonte personalizada */
+}
+
+/* Parágrafos com estilo específico */
+.texto__paragrafo {
+    font-size: 27px; /* Tamanho da fonte */
+    font-weight: 400; /* Espessura normal */
+}
+
+/* Botões desativados */
+button:disabled {
+    background-color: gray; /* Cor diferenciada para botão desativado */
+}
+
+/* Estilizações responsivas para telas menores */
+@media screen and (max-width: 1250px) {
+
+    /* Reduz o tamanho do título */
+    h1 {
+        font-size: 50px;
+    }
+
+    /* Reduz o tamanho do texto dos botões */
+    .container__botao {
+        font-size: 16px;
+    }
+
+    /* Reduz o tamanho da fonte dos parágrafos */
+    .texto__paragrafo {
+        font-size: 24px;
+    }
+
+    /* Remove a exibição da imagem decorativa */
+    .container__imagem-pessoa {
+        display: none;
+    }
+
+    /* Ajusta a exibição do conteúdo do contêiner */
+    .container__conteudo {
+        display: block;
+        position: inherit;
+    }
+
+    /* Reduz o espaçamento interno das informações */
+    .container__informacoes {
+        padding: 1rem;
+    }
+}
