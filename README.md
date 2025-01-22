@@ -39,16 +39,16 @@ Jogo do Número Secreto 🎲
 
 🗂️ Funcionalidades do Código
    - Arquivo: app1.js
-     1. Geração de número secreto único:
+     I. Geração de número secreto único:
          * gerarNumeroAleatorio() cria um número aleatório dentro do intervalo e evita repetição.
 
-     2. Verificação do chute:
+     II. Verificação do chute:
          * verificarChute() compara o chute do jogador com o número secreto e fornece feedback.
 
-     3. Mensagens dinâmicas:
+     III. Mensagens dinâmicas:
          * exibirTextoNaTela() atualiza a interface e narra as mensagens.
 
-     4. Reiniciar jogo:
+     IV. Reiniciar jogo:
          * reiniciarJogo() reinicia todas as variáveis e permite uma nova partida.
 
    - Arquivo: style.css
@@ -66,20 +66,20 @@ Jogo do Número Secreto 🎲
 
 🚀 Como Executar
    - Localmente:
-     1. Clone o repositório:
+     I. Clone o repositório:
          * git clone https://github.com/PauloMPPatricio/jogo-numero-secreto.git
          * cd jogo-numero-secreto
 
-     2. Abra o arquivo index.html no navegador:
+     II. Abra o arquivo index.html no navegador:
          * Clique duas vezes no arquivo, ou
          * Use uma extensão de servidor local, como o Live Server no VS Code, para melhor experiência.
 
    - Online (Vercel):
-     1. Acesse a URL da aplicação já publicada:
+     I. Acesse a URL da aplicação já publicada:
          * Clique ou copie a URL a seguir no navegador:
-         * https://seu-projeto.vercel.app/
+         * [https://jogo-numero-secreto-rosy-chi.vercel.app/]
      
-     2. Jogue diretamente no navegador!
+     II. Jogue diretamente no navegador!
          * A interface do jogo estará pronta para uso.
 
 👨‍💻 Autor
