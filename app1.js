@@ -48,6 +48,10 @@ function verificarChute() {
         const mensagemTentativas = `Você descobriu o número secreto com ${jogo.tentativas} ${palavraTentativa}!`;
         exibirTextoNaTela('p', mensagemTentativas);
         document.getElementById('reiniciar').removeAttribute('disabled');
+
+        // Aumenta a dificuldade se o jogador acertar na primeira tentativa
+        aumentarDificuldade();
+
     } else {
         // Informa se o número secreto é maior ou menor
         const mensagem = chute > jogo.numeroSecreto ? 'O número secreto é menor.' : 'O número secreto é maior.';
@@ -92,6 +96,20 @@ function reiniciarJogo() {
     jogo.tentativas = 1;
     exibirMensagemInicial();
     document.getElementById('reiniciar').setAttribute('disabled', true);
+}
+
+/*
+ * implementa a lógica de aumentar a dificuldade do jogo, alterando a 
+ * variável numeroLimite de 10 em 10 até no máximo 100, sempre que o 
+ * jogador acertar o número na primeira tentativa (palavraTentativa == 1).
+ */
+function aumentarDificuldade() {
+    if (jogo.tentativas === 1 && jogo.numeroLimite < 100) { // Verifica se acertou na primeira tentativa e se ainda não atingiu o limite máximo
+        jogo.numeroLimite = Math.min(jogo.numeroLimite + 10, 100); // Aumenta o limite em 10, sem ultrapassar 100
+        setTimeout(() => {
+            exibirTextoNaTela('p', `Parabéns, você mudou de fase!`);
+        }, 7000);// Atraso de 2 segundos antes de exibir a mensagem.
+    }
 }
 
 // Inicialização do jogo

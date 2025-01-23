@@ -1,4 +1,4 @@
-Jogo do Número Secreto 🎲
+🎲 Jogo do Número Secreto 🎲
  - Bem-vindo ao projeto "Jogo do Número Secreto"! Este é um jogo simples e interativo desenvolvido com HTML, CSS e JavaScript, onde o jogador tenta adivinhar um número secreto gerado       aleatoriamente.
 
 📝 Descrição
@@ -9,6 +9,8 @@ Jogo do Número Secreto 🎲
   * Número secreto aleatório: Um número único é gerado a cada rodada.
   * Feedback em tempo real: O jogo orienta se o número secreto é maior ou menor que o chute.
   * Contador de tentativas: Exibe quantas tentativas foram necessárias para acertar.
+  * Mudança de fase: Muda de fase quando acertamos 
+  o número secreto na primeira tentativa.
   * Interface interativa: Design moderno e responsivo.
   * Voz sintetizada: Mensagens são narradas com a biblioteca ResponsiveVoice.
 
